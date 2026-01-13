@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uprise Digital Land Survey - Accurate Mapping Solutions</title>
+    <meta name="description" content="Professional digital land surveying in Sivakasi, Tamil Nadu. Topographical, boundary, contour, DGPS, drone surveys, building marking & more. Accurate & fast.">
+    <meta name="keywords" content="land survey Sivakasi, digital survey Tamil Nadu, drone survey, total station survey, DGPS, topographical survey, boundary survey">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <style>
+        body { font-family: 'Poppins', sans-serif; color: #222; background: #fff; }
+        .navbar { background: #E65100 !important; }
+        .navbar-brand, .nav-link { color: #FFFFFF !important; font-weight: 600; }
+        .navbar-brand:hover, .nav-link:hover { color: #FFECB3 !important; }
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.35)), url('https://t3.ftcdn.net/jpg/16/47/96/48/360_F_1647964809_ao9OWxZUqK8FkzVOdQw9WzvwHXcMMjV8.jpg') center/cover no-repeat fixed;
+            color: #FFFFFF; height: 100vh; display: flex; align-items: center; text-align: center; position: relative; overflow: hidden;
+        }
+        #particles-js { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
+        .hero .container { position: relative; z-index: 1; }
+        .section-title { font-weight: 700; color: #FF6B00; position: relative; display: inline-block; text-transform: uppercase; letter-spacing: 3px; }
+        .section-title::after { content: ''; width: 140px; height: 6px; background: #FF6B00; position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); border-radius: 3px; }
+        .service-card {
+            border: none; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+            transition: all 0.6s ease; background: #fff;
+        }
+        .service-card:hover { transform: translateY(-20px); box-shadow: 0 30px 60px rgba(255,107,0,0.35); }
+        .service-img { height: 220px; object-fit: cover; transition: transform 0.8s ease; }
+        .service-card:hover .service-img { transform: scale(1.1); }
+        .card-body { padding: 25px; }
+        .service-title {
+            font-size: 1.5rem; font-weight: 700; color: #FF6B00; text-transform: uppercase; letter-spacing: 1.5px;
+            margin-bottom: 15px; position: relative; display: inline-block;
+        }
+        .service-title::after { content: ''; width: 80px; height: 3px; background: #FF6B00; position: absolute; bottom: -8px; left: 0; }
+        .clients-section { background: linear-gradient(135deg, #E65100 0%, #FF8C00 100%); color: #FFFFFF; padding: 80px 0; }
+        .clients-main-heading { color: #FFFFFF; font-weight: 900; text-transform: uppercase; letter-spacing: 5px; font-size: 3rem; margin-bottom: 50px; text-shadow: 0 4px 15px rgba(0,0,0,0.6); animation: glow 4s infinite alternate; }
+        .client-heading { color: #FFFFFF; font-weight: 800; text-transform: uppercase; letter-spacing: 4px; font-size: 2.4rem; margin-bottom: 35px; position: relative; display: inline-block; }
+        .client-heading::after { content: ''; width: 120px; height: 5px; background: #FFECB3; position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); border-radius: 5px; }
+        .client-list { list-style: none; padding: 0; }
+        .client-list li { background: rgba(255,255,255,0.18); margin: 18px 0; padding: 18px 30px; border-radius: 15px; font-size: 1.2rem; color: #FFFFFF; transition: all 0.5s ease; }
+        .client-list li.visible { opacity: 1; transform: translateX(0); }
+        .client-list li:hover { background: rgba(255,255,255,0.3); transform: translateX(15px); box-shadow: 0 15px 30px rgba(0,0,0,0.4); }
+        footer { background: #E65100; color: #FFFFFF; padding: 60px 0 30px; }
+        .btn-primary { background: #FF6B00; border: none; padding: 16px 40px; font-weight: 800; color: #FFFFFF; transition: all 0.4s ease; box-shadow: 0 8px 25px rgba(255,107,0,0.5); text-transform: uppercase; letter-spacing: 1.5px; border-radius: 50px; font-size: 1.2rem; }
+        .btn-primary:hover { background: #FF8C00; transform: translateY(-5px) scale(1.05); box-shadow: 0 15px 40px rgba(255,107,0,0.7); }
+        .text-orange { color: #FF6B00; }
+        .animate-section { opacity: 0; transform: translateY(80px); transition: all 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+        .animate-section.visible { opacity: 1; transform: translateY(0); }
+        .benefits-list { list-style: none; padding-left: 0; font-size: 1rem; color: #333; }
+        .benefits-list li { position: relative; padding-left: 35px; margin-bottom: 12px; }
+        .benefits-list li::before { content: '\f058'; font-family: 'Font Awesome 6 Free'; font-weight: 900; color: #FF6B00; position: absolute; left: 0; top: 2px; font-size: 1.3rem; }
+        @keyframes glow { 0% { text-shadow: 0 0 10px rgba(255,236,179,0.6); } 100% { text-shadow: 0 0 30px rgba(255,236,179,0.9); } }
+
+        .whatsapp-float { position: fixed; bottom: 25px; right: 25px; background: #25D366; color: white; border-radius: 50%; width: 65px; height: 65px; text-align: center; line-height: 65px; z-index: 1000; box-shadow: 0 6px 18px rgba(0,0,0,0.3); font-size: 2.2rem; transition: all 0.3s; }
+        .whatsapp-float:hover { transform: scale(1.1); }
+
+        @media (max-width: 768px) { .hero { height: 90vh; } .service-img { height: 200px; } }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold fs-4 d-flex align-items-center" href="#">
+            <img src="logo.png" alt="Uprise Digital Land Survey Logo" class="me-2" width="50" height="50">
+            Uprise Digital Land Survey
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#clients">Clients</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section id="home" class="hero animate__animated animate__fadeIn">
+    <div id="particles-js"></div>
+    <div class="container text-center">
+        <h1 class="display-3 fw-bold mb-4">Uprise Digital Land Survey</h1>
+        <p class="lead fs-4 mb-4"><span id="typed"></span></p>
+        <p class="mb-4 fs-5">UDYAM-TN-32-0078371 | GSTIN: 33BUBPV2436H1ZO</p>
+        <a href="#contact" class="btn btn-primary btn-lg animate__animated animate__pulse animate__infinite">Get Professional Survey Quote</a>
+    </div>
+</section>
+
+<!-- About -->
+<section id="about" class="py-5 animate-section">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">About Us</h2>
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <p class="lead">At Uprise Digital Land Survey, led by experienced land surveyors, we leverage cutting-edge digital survey technology to deliver accurate and efficient land surveying services. With 4+ years of experience and a commitment to client satisfaction, we ensure precision in every project. Our focus on speed, precision, and value ensures you get the right data.</p>
+            </div>
+            <div class="col-lg-6">
+                <img src="https://www.optron.com/wp-content/uploads/2025/07/survey-equipment-construction-site-overlay.png" class="img-fluid rounded shadow" alt="Modern Digital Surveying Equipment" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="py-5 bg-light animate-section">
+    <div class="container">
+        <h2 class="section-title text-center mb-5 animate__animated animate__fadeInDown">Our Services</h2>
+        <div class="row g-4">
+            <!-- Topographical Survey - UPDATED IMAGE -->
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+                    <img src="topographical.png">
+                    <div class="card-body">
+                        <h5 class="service-title">Topographical Survey</h5>
+                        <p>Comprehensive representation of land features and elevations using advanced tools like Total Station, GPS, and Drone.</p>
+                        <hr>
+                        <h6 class="text-orange fw-bold">Features:</h6>
+                        <ul class="benefits-list">
+                            <li>Measurement of ground levels, slopes, and contours</li>
+                            <li>Identification of natural and man-made features</li>
+                            <li>Preparation of digital maps, CAD drawings, and 3D models</li>
+                            <li>Accurate site data for planning, design, and engineering</li>
+                        </ul>
+                        <hr>
+                        <h6 class="text-orange fw-bold">Benefits:</h6>
+                        <ul class="benefits-list">
+                            <li>Complete understanding of land conditions</li>
+                            <li>Optimal infrastructure & drainage planning</li>
+                            <li>Reduces errors, delays, and costs</li>
+                            <li>Earthwork estimation & land grading</li>
+                            <li>Legal & regulatory compliance</li>
+                            <li>Informed decision-making for developers & engineers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card animate__animated animate__fadeInUp" style="animation-delay: 0.3s;">
+                    <img src="https://professional-surveys.com/wp-content/uploads/2021/02/demarcation-1024x683.jpg" class="service-img card-img-top" alt="Boundary Survey" loading="lazy">
+                    <div class="card-body">
+                        <h5 class="service-title">Boundary Survey</h5>
+                        <p>Accurate property boundary identification and demarcation using digital instruments.</p>
+                        <hr>
+                        <h6 class="text-orange fw-bold">Benefits:</h6>
+                        <ul class="benefits-list">
+                            <li>Prevents land disputes</li>
+                            <li>Accurate verification of records & title documents</li>
+                            <li>Supports land registration & fencing</li>
+                            <li>Clear boundary marking for construction</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+                    <img src="https://i.ytimg.com/vi/TW-IcXmbcvI/maxresdefault.jpg" class="service-img card-img-top" alt="Building Marking" loading="lazy">
+                    <div class="card-body">
+                        <h5 class="service-title">Building Marking</h5>
+                        <p>Precise marking of construction points as per approved plans using advanced digital tools.</p>
+                        <hr>
+                        <h6 class="text-orange fw-bold">Services Include:</h6>
+                        <ul class="benefits-list">
+                            <li>Excavation & foundation marking</li>
+                            <li>Column center line & grid marking</li>
+                            <li>Plinth, floor & reference level transfer</li>
+                            <li>Alignment & orientation checking</li>
+                            <li>Digital verification for construction accuracy</li>
+                        </ul>
+                        <hr>
+                        <h6 class="text-orange fw-bold">Benefits:</h6>
+                        <ul class="benefits-list">
+                            <li>High accuracy & reduced errors</li>
+                            <li>Saves time & avoids costly rework</li>
+                            <li>Ensures construction as per drawings</li>
+                            <li>Improves structural alignment & quality</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card animate__animated animate__fadeInUp" style="animation-delay: 0.5s;">
+                    <img src="https://www.rayshader.com/reference/figures/smallhobart.gif" class="service-img card-img-top" alt="Contour Survey" loading="lazy">
+                    <div class="card-body">
+                        <h5 class="service-title">Contour Survey</h5>
+                        <p>Accurate mapping of land elevations, depressions, and slopes.</p>
+                        <hr>
+                        <h6 class="text-orange fw-bold">Benefits:</h6>
+                        <ul class="benefits-list">
+                            <li>Clear understanding of land levels & slopes</li>
+                            <li>Essential for drainage & water flow planning</li>
+                            <li>Reduces earthwork costs</li>
+                            <li>Minimizes construction errors & rework</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card animate__animated animate__fadeInUp" style="animation-delay: 0.6s;">
+                    <img src="http://www.cadmax.co.in/image/dgps-survey.jpg" class="service-img card-img-top" alt="DGPS Survey" loading="lazy">
+                    <div class="card-body">
+                        <h5 class="service-title">DGPS Survey</h5>
+                        <p>Centimeter-level precision using satellite-based technology.</p>
+                        <hr>
+                        <h6 class="text-orange fw-bold">Benefits:</h6>
+                        <ul class="benefits-list">
+                            <li>High accuracy for legal & engineering purposes</li>
+                            <li>Fast data collection over large areas</li>
+                            <li>Cost-effective for extensive surveys</li>
+                            <li>Reliable boundary demarcation & infrastructure planning</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card animate__animated animate__fadeInUp" style="animation-delay: 0.7s;">
+                    <img src="https://www.autodesk.com/blogs/construction/wp-content/uploads/2022/01/as-built-drawing-example.png" class="service-img card-img-top" alt="As-Built Survey" loading="lazy">
+                    <div class="card-body">
+                        <h5 class="service-title">As-Built Survey</h5>
+                        <p>Documentation of completed structures & final site conditions.</p>
+                        <hr>
+                        <h6 class="text-orange fw-bold">Benefits:</h6>
+                        <ul class="benefits-list">
+                            <li>Verifies work as per approved plans</li>
+                            <li>Accurate final documentation</li>
+                            <li>Supports legal & regulatory compliance</li>
+                            <li>Reduces future errors & conflicts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card animate__animated animate__fadeInUp" style="animation-delay: 0.8s;">
+                    <img src="https://www.asce.org/-/media/asce-images-and-files/publications-and-news/civil-engineering-magazine/images/2025/04-july-august-2025/cep-feature-how-master-planning-helped-design-three-communities-in-the-carolinas/56-building-communities.jpg" class="service-img card-img-top" alt="Master Planning Survey" loading="lazy">
+                    <div class="card-body">
+                        <h5 class="service-title">Master Planning Survey</h5>
+                        <p>Detailed survey for large development projects & smart cities.</p>
+                        <hr>
+                        <h6 class="text-orange fw-bold">Benefits:</h6>
+                        <ul class="benefits-list">
+                            <li>Clear understanding of site conditions</li>
+                            <li>Better planning & design decisions</li>
+                            <li>Accurate base data for development</li>
+                            <li>Saves time & reduces rework</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card animate__animated animate__fadeInUp" style="animation-delay: 0.9s;">
+                    <img src="https://i.ytimg.com/vi/BzpBHtRKjQU/maxresdefault.jpg" class="service-img card-img-top" alt="Survey Training" loading="lazy">
+                    <div class="card-body">
+                        <h5 class="service-title">Survey Training</h5>
+                        <p>Practical & theoretical training on modern surveying instruments.</p>
+                        <hr>
+                        <h6 class="text-orange fw-bold">Benefits:</h6>
+                        <ul class="benefits-list">
+                            <li>Hands-on experience with real tools</li>
+                            <li>Industry-relevant skills</li>
+                            <li>Enhanced employability</li>
+                            <li>Improved technical knowledge & confidence</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Clients -->
+<section id="clients" class="clients-section py-5 animate-section">
+    <div class="container text-center">
+        <h2 class="clients-main-heading animate__animated animate__fadeInDown">Our Prestigious Clients</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h4 class="client-heading animate__animated animate__fadeInDown">Major Projects</h4>
+                <ul class="client-list">
+                    <li class="animate__animated animate__fadeInLeft" style="animation-delay: 0.1s;">MEPCO SCHLENK ENGINEERING COLLEGE</li>
+                    <li class="animate__animated animate__fadeInLeft" style="animation-delay: 0.2s;">ISRO PROPULSION COMPLEX MAHENDRAGIRI</li>
+                    <li class="animate__animated animate__fadeInLeft" style="animation-delay: 0.3s;">TUTICORIN AIRPORT</li>
+                    <li class="animate__animated animate__fadeInLeft" style="animation-delay: 0.4s;">NPCIL SCHOOL PROJECT (RATHAPURAM)</li>
+                    <li class="animate__animated animate__fadeInLeft" style="animation-delay: 0.5s;">MINISTER WHITE WEAVING MILLS SRIVILLIPUTTUR</li>
+                    <li class="animate__animated animate__fadeInLeft" style="animation-delay: 0.6s;">MEKARK STRUCTURE INDIA PVT LTD</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h4 class="client-heading animate__animated animate__fadeInDown">Other Projects</h4>
+                <ul class="client-list">
+                    <li class="animate__animated animate__fadeInRight" style="animation-delay: 0.1s;">SUPREME FIREWORKS SIVAKASI</li>
+                    <li class="animate__animated animate__fadeInRight" style="animation-delay: 0.2s;">GUPTA PRINTERS SIVAKASI</li>
+                    <li class="animate__animated animate__fadeInRight" style="animation-delay: 0.3s;">TCT PRIVATE LIMITED SIVAKASI</li>
+                    <li class="animate__animated animate__fadeInRight" style="animation-delay: 0.4s;">AMMAN TILES SIVAKASI</li>
+                    <li class="animate__animated animate__fadeInRight" style="animation-delay: 0.5s;">LEMNISCATE ASSOCIATES SIVAKASI</li>
+                    <li class="animate__animated animate__fadeInRight" style="animation-delay: 0.6s;">MAYANN ARCHITECTX</li>
+                    <li class="animate__animated animate__fadeInRight" style="animation-delay: 0.7s;">JANA AGENCIES SIVAKASI</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-5 animate-section">
+    <div class="container">
+        <h2 class="section-title text-center mb-5 animate__animated animate__fadeInDown">Contact Us</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+                <p class="fs-5 mb-4"><i class="fas fa-phone me-2 text-orange"></i> 7339397357 | 8122534814</p>
+                <p class="fs-5 mb-4"><i class="fas fa-envelope me-2 text-orange"></i> Uprisedigilandsurvey@gmail.com</p>
+                <p class="fs-5"><i class="fas fa-map-marker-alt me-2 text-orange"></i> 47, Ganagiri Road, Sivakasi - 626123</p>
+                <iframe class="mt-4 rounded shadow" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.123456789!2d77.802!3d9.45!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwMjcnMDAuMCJOIDc3wrA0OCcwNy4yIkU!5e0!3m2!1sen!2sin!4v1730000000000" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center">
+    <div class="container">
+        <p class="mb-3">
+            <a href="#" class="text-white me-4"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="#" class="text-white me-4"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="https://wa.me/917339397357" class="text-white"><i class="fab fa-whatsapp fa-2x"></i></a>
+        </p>
+        <p class="mb-0">© <script>document.write(new Date().getFullYear());</script> Uprise Digital Land Survey. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/917339397357?text=Hi%20Uprise%20Team%2C%20I%20need%20a%20survey%20quote" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+    // Smooth scroll
+    document.querySelectorAll('a.nav-link').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    // Scroll animations
+    const sections = document.querySelectorAll('.animate-section');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible', 'animate__animated', 'animate__fadeInUp');
+            }
+        });
+    }, { threshold: 0.15 });
+    sections.forEach(section => observer.observe(section));
+
+    // Client list items animation
+    const clientItems = document.querySelectorAll('.client-list li');
+    const clientObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.2 });
+    clientItems.forEach(item => clientObserver.observe(item));
+
+    // Particles.js
+    particlesJS('particles-js', {
+      "particles": {
+        "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#FF6B00" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.45 },
+        "size": { "value": 6, "random": true },
+        "line_linked": { "enable": true, "distance": 250, "color": "#FFFFFF", "opacity": 0.35, "width": 1.5 },
+        "move": { "enable": true, "speed": 5 }
+      },
+      "interactivity": {
+        "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" } }
+      },
+      "retina_detect": true
+    });
+
+    // Typed.js
+    var typed = new Typed('#typed', {
+      strings: [
+        "Accurate Digital Land Surveys",
+        "Precision Mapping with Modern Tools",
+        "Drone, DGPS & Total Station Experts",
+        "Mapping Your Vision Accurately"
+      ],
+      typeSpeed: 60,
+      backSpeed: 40,
+      loop: true,
+      backDelay: 1500
+    });
+</script>
+</body>
+</html>
