@@ -3,28 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0b0b0b">
-  <meta name="description" content="Uprise Digital Land Survey delivers premium land surveying, mapping, DGPS, contour and construction marking services in Sivakasi and across Tamil Nadu.">
-  <title>Uprise Digital Land Survey | Precision Built for Progress</title>
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="Uprise Digital Land Survey delivers premium surveying, mapping, DGPS, contour and construction marking services in Sivakasi and across Tamil Nadu.">
+  <title>Uprise Digital Land Survey | Precision Engineering & Surveying</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <style>
     :root{
-      --bg:#090909;
-      --bg-2:#111111;
-      --panel:#171717;
-      --panel-2:#1d1d1d;
-      --surface:#121212;
-      --orange:#ff7b1a;
-      --orange-2:#ff9f43;
-      --orange-soft:#ffd3a0;
+      --bg:#080808;
+      --bg-2:#101010;
+      --panel:#141414;
+      --surface:#191919;
+      --card:#111111;
+      --orange:#ff7a1a;
+      --orange-2:#ff9b42;
+      --orange-soft:#ffd9ae;
       --text:#f5f5f5;
-      --muted:#d1d1d1;
+      --muted:#d0d0d0;
       --line:rgba(255,255,255,0.09);
       --white:#fff;
-      --shadow:0 22px 50px rgba(0,0,0,.38);
+      --shadow:0 24px 60px rgba(0,0,0,.38);
+      --radius:20px;
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
@@ -33,37 +34,38 @@
     a{text-decoration:none;color:inherit}
     h1,h2,h3,h4{margin:0;font-family:'Manrope',sans-serif;line-height:1.08;color:var(--text)}
     p{margin:0}
-    .container{width:min(1180px, calc(100% - 30px));margin:0 auto}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 22px;border-radius:12px;font-weight:700;border:1px solid transparent;transition:.2s ease;cursor:pointer}
-    .btn-primary{background:linear-gradient(135deg,var(--orange),#ef6300);color:#fff;box-shadow:0 12px 25px rgba(255,123,26,.25)}
-    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 30px rgba(255,123,26,.3)}
+    .container{width:min(1200px, calc(100% - 32px));margin:0 auto}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 22px;border-radius:12px;font-weight:700;border:1px solid transparent;transition:.25s ease;cursor:pointer}
+    .btn-primary{background:linear-gradient(135deg,var(--orange),#e85e00);color:#fff;box-shadow:0 12px 25px rgba(255,122,26,.25)}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 30px rgba(255,122,26,.28)}
     .btn-light{background:transparent;color:var(--text);border-color:rgba(255,255,255,.14)}
     .btn-light:hover{background:rgba(255,255,255,.03);transform:translateY(-2px)}
-    .topbar{background:#0d0d0d;color:#d9d9d9;font-size:.82rem;border-bottom:1px solid var(--line)}
-    .topbar .container{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:10px 0}
+    .topbar{background:#0d0d0d;color:#d7d7d7;font-size:.82rem;border-bottom:1px solid var(--line)}
+    .topbar .container{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:10px 0}
     .topbar .meta{display:flex;gap:18px;flex-wrap:wrap}
     .topbar i{color:var(--orange);margin-right:7px}
-    header{position:sticky;top:0;z-index:50;background:rgba(9,9,9,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
+    header{position:sticky;top:0;z-index:50;background:rgba(8,8,8,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
     nav{display:flex;align-items:center;justify-content:space-between;min-height:76px}
-    .brand{display:flex;align-items:center;gap:12px;color:var(--white);font-weight:800;font-family:'Manrope',sans-serif;font-size:1.04rem}
+    .brand{display:flex;align-items:center;gap:12px;color:var(--white);font-weight:800;font-family:'Manrope',sans-serif;font-size:1.05rem}
     .brand img{width:42px;height:42px;border-radius:12px;padding:4px;background:#fff;object-fit:cover;box-shadow:0 8px 20px rgba(0,0,0,.18)}
-    .nav-links{display:flex;align-items:center;gap:28px;color:#f0f0f0;font-weight:600;font-size:.92rem}
+    .nav-links{display:flex;align-items:center;gap:28px;color:#f3f3f3;font-weight:600;font-size:.92rem}
     .nav-links a{opacity:.9}
     .nav-links a:hover{opacity:1;color:var(--orange-soft)}
-    .nav-cta{padding:10px 14px;border:1px solid rgba(255,123,26,.4);border-radius:10px;background:rgba(255,123,26,.08)}
+    .nav-cta{padding:10px 14px;border:1px solid rgba(255,122,26,.45);border-radius:10px;background:rgba(255,122,26,.08)}
     .menu-btn{display:none;background:transparent;border:0;color:#fff;font-size:1.5rem;padding:6px 8px}
 
-    .hero{position:relative;overflow:hidden;background:linear-gradient(120deg,rgba(0,0,0,.94),rgba(18,18,18,.78),rgba(18,18,18,.68)),url('topographical.png') center/cover no-repeat;min-height:760px;display:flex;align-items:center}
-    .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 18% 30%,rgba(255,123,26,.25),transparent 30%);}
+    .hero{position:relative;overflow:hidden;background:linear-gradient(120deg,rgba(0,0,0,.96),rgba(17,17,17,.82),rgba(17,17,17,.7)),url('topographical.png') center/cover no-repeat;min-height:760px;display:flex;align-items:center}
+    .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 18% 30%,rgba(255,122,26,.28),transparent 38%);}
+    .hero::after{content:'';position:absolute;right:-120px;bottom:-170px;width:500px;height:500px;border:1px solid rgba(255,255,255,.08);border-radius:50%;box-shadow:0 0 0 48px rgba(255,255,255,.02),0 0 0 100px rgba(255,255,255,.015)}
     .hero .container{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:56px}
-    .eyebrow{display:inline-block;margin-bottom:18px;padding:8px 14px;border:1px solid rgba(255,123,26,.45);background:rgba(255,123,26,.08);border-radius:999px;color:var(--orange-soft);font-size:.72rem;font-weight:800;letter-spacing:2px;text-transform:uppercase}
-    .hero h1{font-size:clamp(3rem,5vw,5.2rem);line-height:.96;letter-spacing:-2px;color:#fff;max-width:650px}
+    .eyebrow{display:inline-block;margin-bottom:18px;padding:8px 14px;border:1px solid rgba(255,122,26,.4);background:rgba(255,122,26,.08);border-radius:999px;color:var(--orange-soft);font-size:.72rem;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+    .hero h1{font-size:clamp(3rem,5vw,5.3rem);line-height:.96;letter-spacing:-2px;color:#fff;max-width:660px}
     .hero h1 span{color:var(--orange-soft)}
-    .hero p{margin-top:20px;color:#e4e4e4;max-width:620px;font-size:1.08rem}
+    .hero p{margin-top:20px;color:#e2e2e2;max-width:630px;font-size:1.08rem}
     .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
-    .trust-box{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);backdrop-filter:blur(5px);border-radius:18px;padding:28px;max-width:470px;margin-left:auto;box-shadow:0 20px 40px rgba(0,0,0,.2)}
+    .trust-box{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(5px);border-radius:18px;padding:28px;max-width:470px;margin-left:auto;box-shadow:0 18px 40px rgba(0,0,0,.22)}
     .trust-box-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}
-    .trust-box .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,123,26,.12);border:1px solid rgba(255,123,26,.32);color:#ffd8af;padding:10px 12px;border-radius:10px;font-size:.78rem;font-weight:700}
+    .trust-box .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,122,26,.12);border:1px solid rgba(255,122,26,.3);color:#ffd7ad;padding:10px 12px;border-radius:10px;font-size:.78rem;font-weight:700}
     .mini-card{background:#111;border:1px solid var(--line);border-radius:16px;padding:18px 18px 16px;box-shadow:0 18px 35px rgba(0,0,0,.12)}
     .mini-card h3{font-size:1.1rem;margin-bottom:5px;color:#fff}
     .mini-card p{color:var(--muted);font-size:.9rem;line-height:1.6}
@@ -71,6 +73,7 @@
     .metric{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:14px 10px;text-align:center}
     .metric strong{display:block;font-size:1.4rem;color:#fff}
     .metric span{display:block;font-size:.75rem;color:#d5d5d5;text-transform:uppercase;letter-spacing:.08em}
+
     .stats-strip{margin-top:-46px;position:relative;z-index:2}
     .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;background:#111;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
     .stat{padding:26px 24px;border-right:1px solid var(--line)}
@@ -86,7 +89,7 @@
     .section-head p{margin-top:14px;color:var(--muted);font-size:1.02rem}
 
     .about-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:60px;align-items:center}
-    .about-image{position:relative;border-radius:24px;overflow:hidden;min-height:500px;background:linear-gradient(135deg,rgba(0,0,0,.12),rgba(255,123,26,.15)),url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;box-shadow:var(--shadow)}
+    .about-image{position:relative;border-radius:24px;overflow:hidden;min-height:500px;background:linear-gradient(135deg,rgba(0,0,0,.15),rgba(255,122,26,.18)),url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;box-shadow:var(--shadow)}
     .about-badge{position:absolute;left:26px;bottom:26px;background:rgba(17,17,17,.9);padding:18px 18px 16px;border-radius:14px;box-shadow:0 18px 36px rgba(0,0,0,.15);border:1px solid var(--line)}
     .about-badge strong{display:block;color:#fff;font-size:1.5rem}
     .about-badge span{font-size:.84rem;color:var(--muted)}
@@ -94,11 +97,11 @@
     .feature-list li{display:flex;align-items:flex-start;gap:12px;padding:16px 18px;background:#131313;border:1px solid var(--line);border-radius:12px;color:var(--text);font-weight:600}
     .feature-list i{color:var(--orange);font-size:1.05rem;margin-top:3px}
 
-    .services{background:#0e0e0e}
+    .services{background:#0d0d0d}
     .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
     .service-card{background:#111;border:1px solid var(--line);border-radius:18px;padding:26px 24px;box-shadow:0 8px 20px rgba(0,0,0,.12);transition:.25s ease}
-    .service-card:hover{transform:translateY(-6px);box-shadow:0 18px 34px rgba(0,0,0,.18);border-color:rgba(255,123,26,.32)}
-    .service-icon{width:54px;height:54px;border-radius:14px;background:linear-gradient(135deg,rgba(255,123,26,.18),rgba(255,123,26,.06));display:grid;place-items:center;color:var(--orange);font-size:1.3rem;margin-bottom:18px}
+    .service-card:hover{transform:translateY(-6px);box-shadow:0 18px 34px rgba(0,0,0,.18);border-color:rgba(255,122,26,.32)}
+    .service-icon{width:54px;height:54px;border-radius:14px;background:linear-gradient(135deg,rgba(255,122,26,.18),rgba(255,122,26,.06));display:grid;place-items:center;color:var(--orange);font-size:1.3rem;margin-bottom:18px}
     .service-card h3{font-size:1.2rem;margin-bottom:10px;color:#fff}
     .service-card p{color:var(--muted);font-size:.94rem}
     .service-card ul{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:9px}
@@ -107,7 +110,7 @@
 
     .why-us-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
     .why-box{padding:26px 22px;border-radius:18px;background:#111;border:1px solid var(--line);box-shadow:0 8px 18px rgba(0,0,0,.12)}
-    .why-box .icon{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,rgba(255,123,26,.2),rgba(255,123,26,.08));display:grid;place-items:center;color:var(--orange-2);font-size:1.2rem;margin-bottom:18px}
+    .why-box .icon{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,rgba(255,122,26,.2),rgba(255,122,26,.08));display:grid;place-items:center;color:var(--orange-2);font-size:1.2rem;margin-bottom:18px}
     .why-box h3{font-size:1.08rem;margin-bottom:8px;color:#fff}
     .why-box p{color:var(--muted);font-size:.9rem}
 
@@ -133,8 +136,8 @@
     .person strong{display:block;color:#fff}
     .person span{font-size:.78rem;color:#d6d6d6}
 
-    .cta{background:linear-gradient(135deg,#090909,#181818);color:#fff}
-    .cta .container{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:28px;border-radius:26px;padding:38px 34px;background:linear-gradient(120deg,rgba(255,123,26,.08),rgba(255,255,255,.02));border:1px solid rgba(255,123,26,.18)}
+    .cta{background:linear-gradient(135deg,#080808,#171717);color:#fff}
+    .cta .container{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:28px;border-radius:26px;padding:38px 34px;background:linear-gradient(120deg,rgba(255,122,26,.10),rgba(255,255,255,.02));border:1px solid rgba(255,122,26,.18)}
     .cta h2{font-size:clamp(2rem,3vw,2.8rem);color:#fff}
     .cta p{margin-top:12px;color:#d8d8d8}
     .cta-actions{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:12px}
@@ -143,7 +146,7 @@
     .contact-card{background:#111;border:1px solid var(--line);border-radius:20px;padding:30px;box-shadow:0 18px 38px rgba(0,0,0,.18)}
     .contact-row{display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
     .contact-row:last-child{border-bottom:0;padding-bottom:0}
-    .contact-row .round{width:42px;height:42px;border-radius:12px;background:rgba(255,123,26,.12);display:grid;place-items:center;color:var(--orange);font-size:1.05rem}
+    .contact-row .round{width:42px;height:42px;border-radius:12px;background:rgba(255,122,26,.12);display:grid;place-items:center;color:var(--orange);font-size:1.05rem}
     .contact-row strong{display:block;color:#fff;margin-bottom:2px}
     .contact-row a,.contact-row span{color:var(--muted)}
     .contact-row a:hover{color:var(--orange-soft)}
@@ -152,14 +155,15 @@
     .field label{font-weight:700;color:#fff;font-size:.88rem}
     .field input,.field textarea{width:100%;border:1px solid var(--line);border-radius:12px;padding:14px 15px;background:#0d0d0d;color:var(--text);font:inherit}
     .field textarea{min-height:120px;resize:vertical}
-    .field input:focus,.field textarea:focus{outline:2px solid rgba(255,123,26,.18);border-color:rgba(255,123,26,.45)}
+    .field input:focus,.field textarea:focus{outline:2px solid rgba(255,122,26,.16);border-color:rgba(255,122,26,.42)}
 
-    footer{background:#090909;color:#cfcfcf;padding:26px 0;border-top:1px solid var(--line)}
+    footer{background:#080808;color:#cfcfcf;padding:26px 0;border-top:1px solid var(--line)}
     footer .container{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
     .socials{display:flex;gap:16px;font-size:1.1rem;color:#fff}
     .socials a:hover{color:var(--orange)}
     .float-wa{position:fixed;right:22px;bottom:24px;z-index:40;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#25d366;color:#fff;font-size:1.6rem;box-shadow:0 18px 25px rgba(37,211,102,.25)}
     .float-wa:hover{transform:translateY(-2px)}
+
     @media (max-width:980px){
       .hero .container,.about-grid,.cta .container,.contact-grid{grid-template-columns:1fr}
       .hero .container{min-height:650px;padding-top:20px}
@@ -193,7 +197,7 @@
         <span><i class="fa-solid fa-location-dot"></i>Sivakasi, Tamil Nadu</span>
         <span><i class="fa-solid fa-clock"></i>Mon - Sat: 9:00 AM - 6:00 PM</span>
       </div>
-      <span><i class="fa-solid fa-shield-heart"></i>Licensed & professional service</span>
+      <span><i class="fa-solid fa-shield-heart"></i>Premium engineering service</span>
     </div>
   </div>
 
@@ -222,9 +226,9 @@
     <section class="hero" id="home">
       <div class="container">
         <div class="hero-copy">
-          <div class="eyebrow">Premium land surveying</div>
-          <h1>Precision <span>that drives</span> better decisions.</h1>
-          <p>From site planning to construction readiness, we provide reliable topographical, boundary, DGPS, contour and as-built surveying services for developers, architects, engineers and landowners.</p>
+          <div class="eyebrow">Engineering-grade precision</div>
+          <h1>Precision <span>built for</span> major decisions.</h1>
+          <p>From land assessment to construction readiness, we deliver dependable surveying, mapping and field intelligence for engineering teams, developers, planners and property stakeholders.</p>
           <div class="hero-actions">
             <a href="#contact" class="btn btn-primary">Get a quote <i class="fa-solid fa-arrow-right"></i></a>
             <a href="tel:+917339397357" class="btn btn-light"><i class="fa-solid fa-phone"></i> Call now</a>
@@ -238,8 +242,8 @@
           </div>
 
           <div class="mini-card">
-            <h3>Surveying solutions built for progress</h3>
-            <p>Accurate data, professional reports and site-ready outputs for projects of every scale.</p>
+            <h3>Surveying solutions engineered for progress</h3>
+            <p>Accurate data, documented clarity and on-site confidence for projects of every scale.</p>
           </div>
 
           <div class="metric-row">
@@ -264,19 +268,19 @@
       <div class="stats-grid">
         <div class="stat">
           <strong>Accurate</strong>
-          <span>Field data, reports & CAD-ready results</span>
+          <span>Reliable site data and reporting</span>
         </div>
         <div class="stat">
           <strong>Modern</strong>
-          <span>GPS, DGPS, drone & total station workflows</span>
+          <span>DGPS, total station, drone & mapping tools</span>
         </div>
         <div class="stat">
           <strong>Reliable</strong>
-          <span>Project-focused support with clear deliverables</span>
+          <span>Stakeholder-ready deliverables</span>
         </div>
         <div class="stat">
           <strong>Local</strong>
-          <span>Serving Sivakasi and Tamil Nadu</span>
+          <span>Servicing Sivakasi & Tamil Nadu</span>
         </div>
       </div>
     </div>
@@ -294,13 +298,13 @@
           <div class="section-head">
             <div class="kicker">About us</div>
             <h2>Measured with confidence. Delivered with clarity.</h2>
-            <p>At Uprise Digital Land Survey, we help clients make stronger land decisions before construction, investment or development begins. We combine technology, field experience and practical reporting to bring clarity to every site.</p>
+            <p>At Uprise Digital Land Survey, we help clients make stronger land decisions before construction, investment or development begins. We combine field expertise with modern digital tools to produce precise, actionable survey outcomes.</p>
           </div>
 
           <ul class="feature-list">
-            <li><i class="fa-solid fa-circle-check"></i> Accurate measurements for planning, construction and legal certainty</li>
-            <li><i class="fa-solid fa-circle-check"></i> Technical reporting built for architects, engineers and project teams</li>
-            <li><i class="fa-solid fa-circle-check"></i> Efficient workflows with modern digital surveying equipment</li>
+            <li><i class="fa-solid fa-circle-check"></i> Exact measurements for planning, legal clarity and construction control</li>
+            <li><i class="fa-solid fa-circle-check"></i> Technical reporting built for project teams, engineers and architects</li>
+            <li><i class="fa-solid fa-circle-check"></i> Efficient field execution with premium digital surveying workflow</li>
           </ul>
         </div>
       </div>
@@ -310,30 +314,30 @@
       <div class="container">
         <div class="section-head center">
           <div class="kicker">Our services</div>
-          <h2>Complete surveying support at every project stage</h2>
-          <p>We provide dependable data for land assessment, planning, documentation and execution.</p>
+          <h2>Engineering-driven survey solutions</h2>
+          <p>End-to-end surveying support for every phase of your development journey.</p>
         </div>
 
         <div class="service-grid">
           <article class="service-card">
             <div class="service-icon"><i class="fa-solid fa-mountain-sun"></i></div>
             <h3>Topographical Survey</h3>
-            <p>Mapping of levels, contours, slopes and site features for planning and engineering design.</p>
+            <p>Detailed land profiling with contour, slope and structural data for planning and engineering.</p>
             <ul>
-              <li>Digital land profile</li>
-              <li>Contour & elevation data</li>
-              <li>Design-ready survey layouts</li>
+              <li>Elevation & contour mapping</li>
+              <li>Terrain analysis</li>
+              <li>Design-ready output</li>
             </ul>
           </article>
 
           <article class="service-card">
             <div class="service-icon"><i class="fa-solid fa-draw-polygon"></i></div>
             <h3>Boundary Survey</h3>
-            <p>Precise property line identification and demarcation for legal and practical use.</p>
+            <p>Precise boundary determination and demarcation to strengthen legal and project certainty.</p>
             <ul>
-              <li>Boundary demarcation</li>
-              <li>Dispute prevention support</li>
-              <li>Land registration clarity</li>
+              <li>Property line verification</li>
+              <li>Dispute prevention</li>
+              <li>Fencing & layout support</li>
             </ul>
           </article>
 
@@ -342,7 +346,7 @@
             <h3>Building Marking</h3>
             <p>Exact setting out for foundations, grids and structural alignment with construction precision.</p>
             <ul>
-              <li>Column & grid marking</li>
+              <li>Grid & column marking</li>
               <li>Level transfer</li>
               <li>Reduced rework</li>
             </ul>
@@ -351,22 +355,22 @@
           <article class="service-card">
             <div class="service-icon"><i class="fa-solid fa-chart-area"></i></div>
             <h3>Contour Survey</h3>
-            <p>Elevation and slope analysis for drainage planning, grading and risk reduction.</p>
+            <p>Elevation and slope analysis for drainage planning, earthwork and site optimization.</p>
             <ul>
               <li>Drainage planning</li>
               <li>Earthwork estimation</li>
-              <li>Construction feasibility</li>
+              <li>Feasibility analysis</li>
             </ul>
           </article>
 
           <article class="service-card">
             <div class="service-icon"><i class="fa-solid fa-satellite"></i></div>
             <h3>DGPS Survey</h3>
-            <p>High-accuracy positioning for large-scale sites, infrastructure and engineering projects.</p>
+            <p>High-accuracy satellite measurement for large-scale infrastructure and engineering works.</p>
             <ul>
-              <li>High-precision coordinate data</li>
+              <li>Precise coordinate data</li>
               <li>Large-area coverage</li>
-              <li>Reliable engineering base data</li>
+              <li>Reliable base points</li>
             </ul>
           </article>
 
@@ -375,9 +379,9 @@
             <h3>As-Built Survey</h3>
             <p>Final documentation to verify completed construction against approved plans and site conditions.</p>
             <ul>
-              <li>Final site validation</li>
+              <li>Final validation</li>
+              <li>Compliance checks</li>
               <li>Documentation support</li>
-              <li>Regulatory compliance</li>
             </ul>
           </article>
         </div>
@@ -395,22 +399,22 @@
           <div class="why-box">
             <div class="icon"><i class="fa-solid fa-compass-drafting"></i></div>
             <h3>Accurate output</h3>
-            <p>Site data is captured with care and checked for practical reliability.</p>
+            <p>Precise field data and dependable reporting for project decisions.</p>
           </div>
           <div class="why-box">
             <div class="icon"><i class="fa-solid fa-rocket"></i></div>
             <h3>Fast turnaround</h3>
-            <p>We keep fieldwork and reporting efficient without compromising quality.</p>
+            <p>Efficient execution without compromising technical quality.</p>
           </div>
           <div class="why-box">
             <div class="icon"><i class="fa-solid fa-user-tie"></i></div>
             <h3>Professional team</h3>
-            <p>Experienced support for residential, commercial and infrastructure projects.</p>
+            <p>Experienced specialists supporting engineering and development teams.</p>
           </div>
           <div class="why-box">
             <div class="icon"><i class="fa-solid fa-chart-line"></i></div>
             <h3>Actionable results</h3>
-            <p>Deliverables are designed to help your next decision move forward with confidence.</p>
+            <p>Deliverables designed to help teams make informed decisions.</p>
           </div>
         </div>
       </div>
@@ -420,8 +424,8 @@
       <div class="container">
         <div class="section-head center">
           <div class="kicker">Project highlights</div>
-          <h2>Trusted across development and industrial work</h2>
-          <p>Our expertise supports institutions, industrial sites and growing businesses across southern Tamil Nadu.</p>
+          <h2>Trusted across landmark and industrial work</h2>
+          <p>Our expertise supports institutions, industrial facilities and growing businesses across southern Tamil Nadu.</p>
         </div>
 
         <div class="gallery-grid">
